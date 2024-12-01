@@ -33,3 +33,6 @@ $RECYCLE.BIN/
 ehthumbs.db
 Thumbs.db
 .cache
+
+# Rust
+target/
