@@ -18,8 +18,7 @@ fn read_input() -> (Vec<i32>, Vec<i32>) {
     (left, right)
 }
 
-fn part_one() {
-    let (mut left, mut right) = read_input();
+fn part_one(left: Vec<i32>, right: Vec<i32>) {
     left.sort();
     right.sort();
     let mut total_distance = 0;
@@ -29,8 +28,7 @@ fn part_one() {
     println!("Total distance: {}", total_distance);
 }
 
-fn part_two() {
-    let (left, right) = read_input();
+fn part_two(left: Vec<i32>, right: Vec<i32>) {
     let mut similarity_score = 0;
     for i in 0..left.len() {
         let left_num = left[i];
@@ -41,6 +39,7 @@ fn part_two() {
 }
 
 fn main() {
-    part_one();
-    part_two();
+    let (left, right) = read_input();
+    part_one(left, right);
+    part_two(left, right);
 }
